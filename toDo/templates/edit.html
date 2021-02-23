@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f13df7a366.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/add.css'  %}">
+    <title>Add New Task</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %} 
+        <h3>EDIT TASK</h3>
+        <input type="text" name="taskname" value="{{ taskobj.name }}" >
+        <input type="date" name="taskdate" id="taskdate" value="{{ taskobj.date }}">
+        
+        <button>SAVE</button>
+    </form>
+
+</body>
+</html>
